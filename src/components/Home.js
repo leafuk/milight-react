@@ -28,7 +28,7 @@ class Home extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className="page">
         <AppBar title="Main Controller" hasBackButton={false}/>
 
         <OnOffPanels lightType="master" />

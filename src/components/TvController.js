@@ -9,7 +9,7 @@ class TvController extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="page">
         <AppBar title="TV LEDs" hasBackButton={true}/>
         <OnOffPanels lightType="tv" />
           <div style={{marginTop:'50px'}}>

@@ -9,7 +9,7 @@ class SpotLampController extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="page">
         <AppBar title="Floor Lamp" hasBackButton={true}/>
         <OnOffPanels lightType="floorlamp"/>
       </div>

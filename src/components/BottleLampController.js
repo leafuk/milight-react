@@ -8,7 +8,7 @@ import BrightnessSlider from './BrightnessSlider';
 class SpotLampController extends React.Component {
   render () {
     return (
-      <div>
+      <div className="page">
         <AppBar title="Bottle Lamp" hasBackButton={true}/>
         <OnOffPanels lightType="bottlelamp" />
       </div>

@@ -1,0 +1,8 @@
+{
+  "name": "Switch controllers for lamps",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "gcm_sender_id": "1038109618068"
+}
+

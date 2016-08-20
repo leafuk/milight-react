@@ -1,0 +1,21 @@
+a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d20c37;
+  text-decoration: none;
+  transition: color 1s;
+
+  &:hover {
+    color: #333333;
+    text-decoration: none;
+  }
+}
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}

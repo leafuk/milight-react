@@ -21,7 +21,7 @@ const BrightnessSlider = React.createClass({
       <div>
         <Slider
           step={1}
-          value={10}
+          value={20}
           min={0}
           max={20}
           step={1}

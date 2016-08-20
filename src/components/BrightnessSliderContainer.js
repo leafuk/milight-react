@@ -11,7 +11,7 @@ class BrightnessSliderContainer extends React.Component {
   }
 
   state = {
-    brightness: 10
+    brightness: 20
   }
 
   handleBrightnessChange(event, value){

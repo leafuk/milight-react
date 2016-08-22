@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Slider from 'material-ui/Slider';
-import FontIcon from 'material-ui/FontIcon';
 
 import BrightnessIcon from 'material-ui/svg-icons/action/settings-brightness';
 
@@ -24,7 +23,6 @@ const BrightnessSlider = React.createClass({
           value={20}
           min={0}
           max={20}
-          step={1}
           defaultValue={20}
           sliderStyle={{marginBottom:0, marginTop:0}}
           style={{height: 160}}

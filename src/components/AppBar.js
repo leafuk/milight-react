@@ -1,9 +1,8 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import FontIcon from 'material-ui/FontIcon';
-import { Router, RouterContext, Link, browserHistory } from 'react-router';
 
 export default class AppBarBack extends React.Component {
   renderBackButton() {

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import axios from 'axios';
 
 import OnOffPanels from './OnOffPanels';
@@ -6,10 +6,6 @@ import OnOffPanels from './OnOffPanels';
 const baseUrl = "http://192.168.1.84:3000"
 
 class OnOffPanelContainer extends React.Component {
-  constructor(props) {
-    super(props);
-   }
-
   handleSwitchOn(){
     var endPoint = '';
     switch(this.props.lightType){
@@ -27,6 +23,9 @@ class OnOffPanelContainer extends React.Component {
         break;
       case 'tv':
         endPoint = '/tv/on';
+        break;
+      default:
+        endPoint = '/master/on';
         break;
     }
 
@@ -56,6 +55,9 @@ class OnOffPanelContainer extends React.Component {
         break;
       case 'tv':
         endPoint = '/tv/off';
+        break;
+      default:
+        endPoint = '/master/off';
         break;
     }
 

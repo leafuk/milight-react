@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import axios from 'axios';
 
 import ColorSlider from './ColorSlider'
@@ -19,15 +19,7 @@ class ColorSliderContainer extends React.Component {
       color: color
     });
 
-    var endPoint = '';
-    switch(this.props.lightType){
-      case 'spotlamp':
-        endPoint = '/milight/colors';
-        break;
-      case 'tv':
-        endPoint = '/tv/colors';
-        break;
-    }
+    var endPoint = this.props.lightType === 'spotlamp' ? '/milight/colors' : '/tv/colors';
 
     axios.post(baseUrl + endPoint, {
         color: color

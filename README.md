@@ -1,2 +1,2 @@
 # milight-react
-React web app for calling milights-web api
+React web app for calling milight-web api

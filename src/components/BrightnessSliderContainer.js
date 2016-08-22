@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import axios from 'axios';
 
 import BrightnessSlider from './BrightnessSlider'
@@ -6,9 +6,6 @@ import BrightnessSlider from './BrightnessSlider'
 const baseUrl = "http://192.168.1.84:3000"
 
 class BrightnessSliderContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   state = {
     brightness: 20
@@ -17,15 +14,7 @@ class BrightnessSliderContainer extends React.Component {
   handleBrightnessChange(event, value){
     this.setState({brightness: value});
 
-    var endPoint = '';
-    switch(this.props.lightType){
-      case 'spotlamp':
-        endPoint = '/milight/brightness';
-        break;
-      case 'tv':
-        endPoint = '/tv/brightness';
-        break;
-    }
+    var endPoint = this.props.lightType === 'spotlamp' ? '/milight/brightness' : '/tv/brightness';
 
     axios.post(baseUrl + endPoint, {
         level: value

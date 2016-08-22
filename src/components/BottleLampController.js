@@ -1,9 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 import AppBar from './AppBar';
 import OnOffPanels from './OnOffPanelContainer';
-import ColorSlider from './ColorSlider';
-import BrightnessSlider from './BrightnessSlider';
 
 class SpotLampController extends React.Component {
   render () {

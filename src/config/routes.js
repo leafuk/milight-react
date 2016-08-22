@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 import App from '../components/App';
 import Hello from '../components/Home';
 import TvController from '../components/TvController'

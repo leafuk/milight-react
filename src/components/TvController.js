@@ -1,9 +1,8 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import AppBar from './AppBar'
 
 import OnOffPanels from './OnOffPanelContainer';
 import ColorSlider from './ColorSliderContainer';
-import BrightnessSlider from './BrightnessSliderContainer';
 
 class TvController extends React.Component {
 

@@ -1,16 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
 import IconButton from 'material-ui/IconButton';
-import FontIcon from 'material-ui/FontIcon';
 import HardwareTv from 'material-ui/svg-icons/hardware/tv';
 import EditorHighlight from 'material-ui/svg-icons/editor/highlight';
 import Avatar from 'material-ui/Avatar';
 
 import AppBar from './AppBar';
 import OnOffPanels from './OnOffPanelContainer';
-
-import { browserHistory } from 'react-router'
 
 const styles = {
   largeIcon: {

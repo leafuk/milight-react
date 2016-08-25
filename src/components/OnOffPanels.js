@@ -38,8 +38,8 @@ class OnOffPanels extends React.Component {
   render() {
     return (
       <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
-        <div style={this.panelStyles('#4CAF50')} onClick={this.onSwitchOn.bind(this)}><Power style={iconStyles} /></div>
-        <div style={this.panelStyles('#FF5252')} onClick={this.onSwitchOff.bind(this)}><HighlightOff style={iconStyles} /></div>
+        <div style={this.panelStyles('#8BC34A')} onClick={this.onSwitchOn.bind(this)}><Power style={iconStyles} /></div>
+        <div style={this.panelStyles('#FF4081')} onClick={this.onSwitchOff.bind(this)}><HighlightOff style={iconStyles} /></div>
       </div>
     )
   }

@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import IconButton from 'material-ui/IconButton';
-import HardwareTv from 'material-ui/svg-icons/hardware/tv';
-import EditorHighlight from 'material-ui/svg-icons/editor/highlight';
-import Avatar from 'material-ui/Avatar';
 
 import AppBar from './AppBar';
 import OnOffPanels from './OnOffPanelContainer';
+
+import TvIcon from './icons/TvIcon'
+import SpotLampIcon from './icons/SpotLampIcon'
+import FloorLampIcon from './icons/FloorLampIcon'
+import BottleIcon from './icons/BottleIcon'
+import SettingsIcon from './icons/SettingsIcon'
 
 const styles = {
   largeIcon: {
@@ -15,9 +18,8 @@ const styles = {
     height: 60,
   },
   large: {
-    width: 120,
-    height: 120,
-    padding: 30,
+    width: 100,
+    height: 80,
   },
 };
 
@@ -30,18 +32,16 @@ class Home extends React.Component{
 
         <OnOffPanels lightType="master" />
 
-        <div style={{marginTop:'30px'}}>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+        <div style={{marginTop:'10px'}}>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
             <div style={{textAlign:'center'}}>
               <Link to={`/tv/`} >
                 <IconButton
                   iconStyle={styles.largeIcon}
                   style={styles.large}
                   touch={true} >
-                  <HardwareTv />
+                  <TvIcon style={styles.largeIcon} />
                 </IconButton>
-                <br/>
-                TV
               </Link>
             </div>
             <div>
@@ -50,38 +50,44 @@ class Home extends React.Component{
                   iconStyle={styles.largeIcon}
                   style={styles.large}
                   touch={true} >
-                  <EditorHighlight />
+                  <SpotLampIcon />
                 </IconButton>
-                <br/>
-                Spot Lamps
               </Link>
             </div>
-          </div>
-
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
             <div style={{textAlign:'center'}}>
               <Link to={`/floor-lamp/`} >
                 <IconButton
                   iconStyle={styles.largeIcon}
                   style={styles.large}
                   touch={true} >
-                  <Avatar>F</Avatar>
+                  <FloorLampIcon />
                 </IconButton>
-                <br/>
-                Floor Lamp
               </Link>
             </div>
+          </div>
+
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
             <div>
               <Link to={`/bottle-lamp/`} >
                 <IconButton
                   iconStyle={styles.largeIcon}
                   style={styles.large}
                   touch={true} >
-                  <Avatar>B</Avatar>
+                  <BottleIcon />
                 </IconButton>
-                <br/>
-                Bottle Lamp
               </Link>
+            </div>
+            <div style={{textAlign:'center'}}>
+              <Link to={`/presets/`} >
+                <IconButton
+                  iconStyle={styles.largeIcon}
+                  style={styles.large}
+                  touch={true} >
+                  <SettingsIcon />
+                </IconButton>
+              </Link>
+            </div>
+            <div>
             </div>
           </div>
         </div>

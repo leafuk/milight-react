@@ -12,16 +12,7 @@ import FloorLampIcon from './icons/FloorLampIcon'
 import BottleIcon from './icons/BottleIcon'
 import SettingsIcon from './icons/SettingsIcon'
 
-const styles = {
-  largeIcon: {
-    width: 60,
-    height: 60,
-  },
-  large: {
-    width: 100,
-    height: 80,
-  },
-};
+import IconStyles from './styles/IconStyles'
 
 class Home extends React.Component{
 
@@ -33,22 +24,22 @@ class Home extends React.Component{
         <OnOffPanels lightType="master" />
 
         <div style={{marginTop:'10px'}}>
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+          <div style={IconStyles.row}>
             <div style={{textAlign:'center'}}>
               <Link to={`/tv/`} >
                 <IconButton
-                  iconStyle={styles.largeIcon}
-                  style={styles.large}
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
                   touch={true} >
-                  <TvIcon style={styles.largeIcon} />
+                  <TvIcon style={IconStyles.largeIcon} />
                 </IconButton>
               </Link>
             </div>
             <div>
               <Link to={`/spot-lamps/`} >
                 <IconButton
-                  iconStyle={styles.largeIcon}
-                  style={styles.large}
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
                   touch={true} >
                   <SpotLampIcon />
                 </IconButton>
@@ -57,8 +48,8 @@ class Home extends React.Component{
             <div style={{textAlign:'center'}}>
               <Link to={`/floor-lamp/`} >
                 <IconButton
-                  iconStyle={styles.largeIcon}
-                  style={styles.large}
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
                   touch={true} >
                   <FloorLampIcon />
                 </IconButton>
@@ -66,12 +57,12 @@ class Home extends React.Component{
             </div>
           </div>
 
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+          <div style={IconStyles.row}>
             <div>
               <Link to={`/bottle-lamp/`} >
                 <IconButton
-                  iconStyle={styles.largeIcon}
-                  style={styles.large}
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
                   touch={true} >
                   <BottleIcon />
                 </IconButton>
@@ -80,14 +71,14 @@ class Home extends React.Component{
             <div style={{textAlign:'center'}}>
               <Link to={`/presets/`} >
                 <IconButton
-                  iconStyle={styles.largeIcon}
-                  style={styles.large}
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
                   touch={true} >
                   <SettingsIcon />
                 </IconButton>
               </Link>
             </div>
-            <div>
+            <div style={IconStyles.large}>
             </div>
           </div>
         </div>

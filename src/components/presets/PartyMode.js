@@ -2,16 +2,7 @@ import React from 'react'
 import IconButton from 'material-ui/IconButton'
 import CocktailIcon from '../icons/CocktailIcon'
 
-const styles = {
-  largeIcon: {
-    width: 60,
-    height: 60,
-  },
-  large: {
-    width: 100,
-    height: 80,
-  },
-};
+import IconStyles from '../styles/IconStyles'
 
 class PartyMode extends React.Component {
   handleClick() {
@@ -21,8 +12,8 @@ class PartyMode extends React.Component {
   render () {
     return (
       <IconButton
-        iconStyle={styles.largeIcon}
-        style={styles.large}
+        iconStyle={IconStyles.largeIcon}
+        style={IconStyles.large}
         touch={true}
         onTouchTap={this.handleClick.bind(this)} >
         <CocktailIcon />

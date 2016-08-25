@@ -5,12 +5,14 @@ import MovieModeContainer from './presets/MovieModeContainer'
 import SundayMorningModeContainer from './presets/SundayMorningModeContainer'
 import PartyModeContainer from './presets/PartyModeContainer'
 
+import IconStyles from './styles/IconStyles'
+
 class Presets extends React.Component {
   render () {
     return(
       <div className="page">
         <AppBar title="Presets" hasBackButton={true}/>
-        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+        <div style={IconStyles.row}>
           <div style={{textAlign:'center'}}>
             <MovieModeContainer />
           </div>

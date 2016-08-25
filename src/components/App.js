@@ -1,6 +1,5 @@
 import React from 'react';
 
-import ThemeIndigo from './themes/ThemeIndigo';
 import ThemeBlueGrey from './themes/ThemeBlueGrey';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';

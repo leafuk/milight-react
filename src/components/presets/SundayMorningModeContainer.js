@@ -6,10 +6,6 @@ import SundayMorningMode from './SundayMorningMode';
 const baseUrl = "http://192.168.1.84:3000"
 
 class SundayMorningModeContainer extends React.Component {
-  switchAllOn(){
-    return axios.get(baseUrl + '/master/on');
-  }
-
   setTvColor() {
     return axios.post(baseUrl + '/tv/colors', {
         color: '#00ffff'
@@ -23,10 +19,11 @@ class SundayMorningModeContainer extends React.Component {
   }
 
   handleClick() {
-    axios.all([this.switchAllOn(), this.setTvColor(), this.setSpotLampsColor()])
-      .then(axios.spread(function (allOn, tv, milight) {
-        // All requests are now complete
-      }))
+    axios.get(baseUrl + '/master/on')
+      .then(axios.all([this.setTvColor(), this.setSpotLampsColor()])
+        .then(axios.spread(function (allOn, tv, milight) {
+          // All requests are now complete
+        })))
       .catch(function (error) {
         console.error(error);
       });

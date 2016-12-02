@@ -24,6 +24,9 @@ class OnOffPanelContainer extends React.Component {
       case 'tv':
         endPoint = '/tv/on';
         break;
+      case 'xmastree':
+        endPoint = 'tplink/on';
+        break;
       default:
         endPoint = '/master/on';
         break;
@@ -56,6 +59,9 @@ class OnOffPanelContainer extends React.Component {
       case 'tv':
         endPoint = '/tv/off';
         break;
+      case 'xmastree':
+        endPoint = 'tplink/off';
+        break;
       default:
         endPoint = '/master/off';
         break;
@@ -80,5 +86,5 @@ class OnOffPanelContainer extends React.Component {
 export default OnOffPanelContainer;
 
 OnOffPanelContainer.propTypes = {
-  lightType: React.PropTypes.oneOf(['master','spotlamp','floorlamp','bottlelamp','tv']).isRequired
+  lightType: React.PropTypes.oneOf(['master','spotlamp','floorlamp','bottlelamp','tv','xmastree']).isRequired
 };

@@ -11,6 +11,7 @@ import SpotLampIcon from './icons/SpotLampIcon'
 import FloorLampIcon from './icons/FloorLampIcon'
 import BottleIcon from './icons/BottleIcon'
 import SettingsIcon from './icons/SettingsIcon'
+import ChristmasTreeIcon from './icons/ChristmasTreeIcon'
 
 import IconStyles from './styles/IconStyles'
 
@@ -68,6 +69,16 @@ class Home extends React.Component{
                 </IconButton>
               </Link>
             </div>
+            <div>
+              <Link to={`/xmas-tree/`} >
+                <IconButton
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
+                  touch={true} >
+                  <ChristmasTreeIcon />
+                </IconButton>
+              </Link>
+            </div>
             <div style={{textAlign:'center'}}>
               <Link to={`/presets/`} >
                 <IconButton
@@ -77,8 +88,6 @@ class Home extends React.Component{
                   <SettingsIcon />
                 </IconButton>
               </Link>
-            </div>
-            <div style={IconStyles.large}>
             </div>
           </div>
         </div>

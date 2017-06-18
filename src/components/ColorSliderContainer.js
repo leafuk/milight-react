@@ -1,9 +1,6 @@
 import React from 'react'
-import axios from 'axios';
 
-import ColorSlider from './ColorSlider'
-
-const baseUrl = "http://192.168.1.84:3000"
+import ColorSlider from './ColorPicker'
 
 class ColorSliderContainer extends React.Component {
   constructor(props) {
@@ -19,22 +16,12 @@ class ColorSliderContainer extends React.Component {
       color: color
     });
 
-    var endPoint = this.props.lightType === 'spotlamp' ? '/milight/colors' : '/tv/colors';
-
-    axios.post(baseUrl + endPoint, {
-        color: color
-      })
-      .then(function(response) {
-        // Do nothing
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    this.props.changeColour(color);
   }
 
   render () {
     return(
-      <ColorSlider onColorChange={this.handleColorChange.bind(this)} />
+      <ColorSlider onColorChange={this.handleColorChange.bind(this)} color={this.state.color} />
     )
   }
 }
@@ -42,5 +29,5 @@ class ColorSliderContainer extends React.Component {
 export default ColorSliderContainer;
 
 ColorSliderContainer.propTypes = {
-  lightType: React.PropTypes.oneOf(['spotlamp','tv']).isRequired
+  changeColour: React.PropTypes.func.isRequired
 };

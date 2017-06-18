@@ -10,7 +10,7 @@ export default {
   spacing: spacing,
   fontFamily: 'Roboto, sans-serif',
   palette: {
-    primary1Color: indigo500,
+    primary1Color: '#15182D',
     primary2Color: indigo700,
     primary3Color: indigo100,
     accent1Color: pinkA200,
@@ -21,7 +21,7 @@ export default {
     canvasColor: white,
     borderColor: grey400,
     disabledColor: fade(darkBlack, 0.3),
-    pickerHeaderColor: indigo500,
+    pickerHeaderColor: '#15182D',
     clockCircleColor: fade(darkBlack, 0.07),
     shadowColor: fullBlack,
   },

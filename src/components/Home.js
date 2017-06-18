@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import IconButton from 'material-ui/IconButton';
+import HardwareTv from 'material-ui/svg-icons/hardware/tv';
+import ActionLightbulb from 'material-ui/svg-icons/action/lightbulb-outline';
+import NotificationPower from 'material-ui/svg-icons/notification/power';
 
 import AppBar from './AppBar';
 import OnOffPanels from './OnOffPanelContainer';
 
-import TvIcon from './icons/TvIcon'
-import SpotLampIcon from './icons/SpotLampIcon'
-import FloorLampIcon from './icons/FloorLampIcon'
-import BottleIcon from './icons/BottleIcon'
-import SettingsIcon from './icons/SettingsIcon'
-import ChristmasTreeIcon from './icons/ChristmasTreeIcon'
+import ColorSlider from './ColorSliderContainer';
 
 import IconStyles from './styles/IconStyles'
+
+import HomeApi from '../modules/homeApi';
 
 class Home extends React.Component{
 
@@ -22,7 +22,11 @@ class Home extends React.Component{
       <div className="page">
         <AppBar title="Main Controller" hasBackButton={false}/>
 
-        <OnOffPanels lightType="master" />
+        <OnOffPanels lightType="master" switchOn={HomeApi.switchOnEverything.bind(this)} switchOff={HomeApi.switchOffEverything.bind(this)} />
+
+        <div style={{marginTop:'50px', marginBottom:'50px', marginLeft: 'auto', marginRight: 'auto', width: '80%'}}>
+          <ColorSlider changeColour={HomeApi.changeAllColours.bind(this)} />
+        </div>
 
         <div style={{marginTop:'10px'}}>
           <div style={IconStyles.row}>
@@ -32,7 +36,7 @@ class Home extends React.Component{
                   iconStyle={IconStyles.largeIcon}
                   style={IconStyles.large}
                   touch={true} >
-                  <TvIcon style={IconStyles.largeIcon} />
+                  <HardwareTv style={IconStyles.largeIcon} />
                 </IconButton>
               </Link>
             </div>
@@ -42,23 +46,23 @@ class Home extends React.Component{
                   iconStyle={IconStyles.largeIcon}
                   style={IconStyles.large}
                   touch={true} >
-                  <SpotLampIcon />
+                  <ActionLightbulb />
                 </IconButton>
               </Link>
             </div>
-            <div style={{textAlign:'center'}}>
-              <Link to={`/floor-lamp/`} >
+            <div>
+              <Link to={`/tp-link/`} >
                 <IconButton
                   iconStyle={IconStyles.largeIcon}
                   style={IconStyles.large}
                   touch={true} >
-                  <FloorLampIcon />
+                  <NotificationPower />
                 </IconButton>
               </Link>
             </div>
           </div>
 
-          <div style={IconStyles.row}>
+          {/*<div style={IconStyles.row}>
             <div>
               <Link to={`/bottle-lamp/`} >
                 <IconButton
@@ -75,7 +79,7 @@ class Home extends React.Component{
                   iconStyle={IconStyles.largeIcon}
                   style={IconStyles.large}
                   touch={true} >
-                  <ChristmasTreeIcon />
+                  <EditorFormatAlignJustify />
                 </IconButton>
               </Link>
             </div>
@@ -89,7 +93,7 @@ class Home extends React.Component{
                 </IconButton>
               </Link>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     )

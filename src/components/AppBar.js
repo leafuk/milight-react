@@ -15,6 +15,10 @@ export default class AppBarBack extends React.Component {
     }
   }
 
+  style = {
+    backgroundColor: '#15182D'
+  }
+
   render () {
     return (
       <div>
@@ -23,6 +27,7 @@ export default class AppBarBack extends React.Component {
           title={this.props.title}
           iconElementLeft={this.renderBackButton()}
           showMenuIconButton={this.props.hasBackButton}
+          style={this.style}
         />
       </div>
     )

@@ -13,11 +13,13 @@ const iconStyles = {
 class OnOffPanels extends React.Component {
   panelStyles(bgColor) {
     return {
-      width:'50%',
+      width:'40%',
       backgroundColor:bgColor,
       textAlign: 'center',
-      paddingTop: '50px',
-      paddingBottom: '50px'
+      paddingTop: '20px',
+      paddingBottom: '20px',
+      borderRadius: '100px',
+      marginTop: '20px'
     }
   }
 
@@ -38,8 +40,8 @@ class OnOffPanels extends React.Component {
   render() {
     return (
       <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
-        <div style={this.panelStyles('#8BC34A')} onClick={this.onSwitchOn.bind(this)}><Power style={iconStyles} /></div>
-        <div style={this.panelStyles('#FF4081')} onClick={this.onSwitchOff.bind(this)}><HighlightOff style={iconStyles} /></div>
+        <div style={this.panelStyles('#4B53FF')} onClick={this.onSwitchOn.bind(this)}><Power style={iconStyles} /></div>
+        <div style={this.panelStyles('#FB3353')} onClick={this.onSwitchOff.bind(this)}><HighlightOff style={iconStyles} /></div>
       </div>
     )
   }

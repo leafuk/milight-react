@@ -1,15 +1,4 @@
-a {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #d20c37;
-  text-decoration: none;
-  transition: color 1s;
 
-  &:hover {
-    color: #333333;
-    text-decoration: none;
-  }
-}
 body{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -18,9 +7,14 @@ body{
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  background-color: #1A1E37;
 }
 
 .page{
   position: absolute;
   width: 100%;
+}
+
+.slider-control div > div:nth-child(1) > div {
+    background-color: white !important;
 }

@@ -2,21 +2,17 @@ import React from 'react'
 import AppBar from './AppBar'
 
 import OnOffPanels from './OnOffPanelContainer';
-import ColorSlider from './ColorSliderContainer';
+
+import HomeApi from '../modules/homeApi';
 
 class TvController extends React.Component {
 
   render () {
     return (
       <div className="page">
-        <AppBar title="TV LEDs" hasBackButton={true}/>
-        <OnOffPanels lightType="tv" />
-          <div style={{marginTop:'50px'}}>
-            <div style={{display: 'flex', height: 124, flexDirection: 'row', justifyContent: 'space-around'}}>
-              <ColorSlider lightType="tv" />
-            </div>
-          </div>
-      </div>
+        <AppBar title="TV" hasBackButton={true}/>
+        <OnOffPanels lightType="television" switchOn={HomeApi.switchTVOn.bind(this)} switchOff={HomeApi.switchTVOff.bind(this)} />
+    </div>
     )
   }
 }

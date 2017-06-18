@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ThemeBlueGrey from './themes/ThemeBlueGrey';
+import ThemeBlueDark from './themes/ThemeBlueDark';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -26,7 +26,7 @@ var App = React.createClass({
   render: function(){
 
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(ThemeBlueGrey)}>
+      <MuiThemeProvider muiTheme={getMuiTheme(ThemeBlueDark)}>
         <div>
           {/* <AppBar onRefreshClick={this.refreshFunds} /> */}
 

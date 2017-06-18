@@ -1,16 +1,6 @@
 import React from 'react'
 import Slider from 'material-ui/Slider';
 
-import BrightnessIcon from 'material-ui/svg-icons/action/settings-brightness';
-
-const iconStyles = {
-  color: '#000',
-  marginLeft: '-10px',
-  marginTop: '10px',
-  width: 40,
-  height: 40,
-}
-
 const BrightnessSlider = React.createClass({
   handleBrightnessChange(event, value) {
     this.props.onBrightnessChange(event, value);
@@ -25,11 +15,9 @@ const BrightnessSlider = React.createClass({
           max={20}
           defaultValue={20}
           sliderStyle={{marginBottom:0, marginTop:0}}
-          style={{height: 160}}
-          axis="y"
-          onChange={this.handleBrightnessChange} />
-
-        <BrightnessIcon style={iconStyles} />
+          axis="x"
+          onChange={this.handleBrightnessChange}
+          className="slider-control" />
       </div>
     )
   }

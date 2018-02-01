@@ -8,14 +8,14 @@ import BrightnessSlider from './BrightnessSliderContainer';
 
 import HomeApi from '../modules/homeApi';
 
-const styles = {
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400,
-  }
-};
+// const styles = {
+//   headline: {
+//     fontSize: 24,
+//     paddingTop: 16,
+//     marginBottom: 12,
+//     fontWeight: 400,
+//   }
+// };
 
 class SpotLampController extends React.Component {
 

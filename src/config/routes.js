@@ -6,6 +6,7 @@ import TvController from '../components/TvController'
 import SpotLampController from '../components/SpotLampController'
 import Presets from '../components/Presets'
 import TPLinkController from '../components/TPLinkController'
+import HeaterConroller from '../components/HeaterConroller';
 
 export default (
 
@@ -15,5 +16,6 @@ export default (
 			<Route path="spot-lamps" component={SpotLampController} />
 			<Route path="tp-link" component={TPLinkController} />
 			<Route path="presets" component={Presets} />
+			<Route path="heater" component={HeaterConroller} />
 		</Route>
 );

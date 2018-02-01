@@ -5,6 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import HardwareTv from 'material-ui/svg-icons/hardware/tv';
 import ActionLightbulb from 'material-ui/svg-icons/action/lightbulb-outline';
 import NotificationPower from 'material-ui/svg-icons/notification/power';
+import AcUnitIcon from 'material-ui/svg-icons/places/ac-unit';
 
 import AppBar from './AppBar';
 import OnOffPanels from './OnOffPanelContainer';
@@ -59,6 +60,25 @@ class Home extends React.Component{
                   <NotificationPower />
                 </IconButton>
               </Link>
+            </div>
+          </div>
+
+          <div style={IconStyles.row}>
+            <div>
+              
+            </div>
+            <div style={{textAlign:'center'}}>
+              <Link to={`/heater/`} >
+                <IconButton
+                  iconStyle={IconStyles.largeIcon}
+                  style={IconStyles.large}
+                  touch={true} >
+                  <AcUnitIcon style={IconStyles.largeIcon} />
+                </IconButton>
+              </Link>
+            </div>
+            <div>
+              
             </div>
           </div>
 

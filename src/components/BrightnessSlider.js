@@ -10,10 +10,10 @@ const BrightnessSlider = React.createClass({
       <div>
         <Slider
           step={1}
-          value={20}
+          value={100}
           min={0}
-          max={20}
-          defaultValue={20}
+          max={100}
+          defaultValue={100}
           sliderStyle={{marginBottom:0, marginTop:0}}
           axis="x"
           onChange={this.handleBrightnessChange}

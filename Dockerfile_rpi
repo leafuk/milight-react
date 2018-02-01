@@ -1,0 +1,34 @@
+FROM resin/rpi-raspbian:latest  
+ENTRYPOINT []
+
+RUN apt-get update && \  
+    apt-get -qy install curl \
+                build-essential \
+                libudev-dev \
+                ca-certificates
+
+WORKDIR /root/  
+RUN curl -O \  
+  https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-armv6l.tar.xz
+RUN tar -xvf node-*.tar.xz -C /usr/local \  
+  --strip-components=1
+
+RUN mkdir /app
+WORKDIR /app
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+ADD ./package.json /app
+# RUN npm install -g create-react-app
+# RUN npm install -g serve
+RUN npm -v
+RUN npm install --production
+
+ADD ./src /app/src
+ADD ./app.js /app
+
+RUN npm build
+
+EXPOSE 5000
+
+CMD [ "node", "app.js" ]
